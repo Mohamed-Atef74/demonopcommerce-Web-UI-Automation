@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="113.606">
+<testcase classname="User could register to the website" name="User registers with valid data successfully" time="7.743">
+<system-out><![CDATA[Given User is on the registration page......................................passed
+When User selects a gender..................................................passed
+And Enters a first name.....................................................passed
+And Enters a last name......................................................passed
+And Enters a date of birth..................................................passed
+And Enters an email.........................................................passed
+And Enters a password.......................................................passed
+And Clicks on register button...............................................passed
+Then User should be registered successfully.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could login to the website and reset his password" name="User could log in with valid email and password" time="5.746">
+<system-out><![CDATA[Given User is on the login page.............................................passed
+When User enters a valid email and password.................................passed
+And Clicks on login button..................................................passed
+Then User should be logged-in successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could login to the website and reset his password" name="User could reset his/her password successfully" time="7.349">
+<system-out><![CDATA[Given User is on the login page.............................................passed
+When User clicks on forgot password link....................................passed
+And Enters the registered email.............................................passed
+And Clicks on recover button................................................passed
+Then The password should be reset successfully..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search the website for a specific product" name="Logged User could search for any product" time="7.372">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When User enters "laptop" in the search field...............................passed
+And Clicks on search button.................................................passed
+Then The related results should contain the "laptop"........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search the website for a specific product" name="Logged User could search for any product 2" time="7.213">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When User enters "apple" in the search field................................passed
+And Clicks on search button.................................................passed
+Then The related results should contain the "apple".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search the website for a specific product" name="Logged User could search for any product 3" time="7.299">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When User enters "nike" in the search field.................................passed
+And Clicks on search button.................................................passed
+Then The related results should contain the "nike"..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User can change the selected currency" name="Logged User could switch between currencies US-Euro" time="6.594">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+Then The products price should appear with the Dollar symbol................passed
+When User sets the currency to Euro.........................................passed
+Then The products price should appear with the Euro symbol..................passed
+]]></system-out>
+</testcase>
+<testcase classname="User can select subcategories of different categories" name="Logged user could select different Categories" time="5.773">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When User hovers on a random category.......................................passed
+And Clicks on a random subcategory if found or the category itself if there's no subcategory.passed
+Then User should be redirected to the selected page correctly...............passed
+]]></system-out>
+</testcase>
+<testcase classname="User could filter the products with color and with different tags" name="Logged user could filter with color" time="6.424">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+And The user opens the shoes subcategory from the apparel category..........passed
+When User filters the products by red color.................................passed
+Then The products should be filtered according to the selected color........passed
+]]></system-out>
+</testcase>
+<testcase classname="User could filter the products with color and with different tags" name="Logged user could select different tags" time="11.768">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+And The user searches for something.........................................passed
+When The user selects a tag from the popular tags section...................passed
+Then The products should be filtered according to the selected tag..........passed
+]]></system-out>
+</testcase>
+<testcase classname="User can add products to the shopping cart and can manage the added products there" name="Logged user could add different products to Shopping cart" time="9.068">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+And The user searches for something.........................................passed
+When User adds a product to the cart........................................passed
+Then The product should be added to the cart successfully...................passed
+When User adds another product to the cart..................................passed
+Then The product should be added to the cart successfully...................passed
+And The cart should contain the added products..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User can add products to the wishlist so that he can buy them later" name="Logged user could add different products to Wishlist" time="10.766">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When The user clicks on the heart icon for a product........................passed
+Then The product should be added to the wishlist successfully...............passed
+And The wishlist should contain the product.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User can add products to the compare list to compare between their details" name="Logged user could add different products to compare list" time="8.093">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+And The user searches for something.........................................passed
+When The user adds a product to the compare list............................passed
+Then The product should be added to the compare list successfully...........passed
+When The user adds another product to the compare list......................passed
+Then The product should be added to the compare list successfully...........passed
+And The compare list should contain the added products......................passed
+]]></system-out>
+</testcase>
+<testcase classname="User can create an order and checkout successfully" name="Create successful Order" time="12.2">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+And User has a product in the shopping cart.................................passed
+When The user accepts the terms of service and goes to the checkout page....passed
+And Fills in the billing address............................................passed
+And Selects the shipping method.............................................passed
+And Selects the payment method..............................................passed
+And Reviews the payment information.........................................passed
+And Confirms the order......................................................passed
+Then The order should be created successfully...............................passed
+And The orders list should contain the created order........................passed
+]]></system-out>
+</testcase>
+</testsuite>
