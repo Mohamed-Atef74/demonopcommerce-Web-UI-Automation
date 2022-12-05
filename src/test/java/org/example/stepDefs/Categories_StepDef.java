@@ -3,17 +3,12 @@ package org.example.stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.HomePage;
-import org.example.pages.ProductsPage;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
 
 import java.util.Random;
 
 public class Categories_StepDef {
-    HomePage homeElements = new HomePage();
-    ProductsPage productsPageElements = new ProductsPage();
-    SoftAssert soft = new SoftAssert();
     Random random=new Random();
     String categoryName;
     String subCategoryName;

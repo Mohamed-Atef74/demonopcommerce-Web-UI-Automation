@@ -3,21 +3,14 @@ package org.example.stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.HomePage;
-import org.example.pages.ProductsPage;
-import org.example.pages.WishListPage;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
 
 import java.time.Duration;
 
 public class WishList_StepDef {
-    HomePage homeElements = new HomePage();
-    ProductsPage productsPageElements = new ProductsPage();
-    WishListPage wishListElements = new WishListPage();
     String product;
-    SoftAssert soft = new SoftAssert();
 
     @When("The user clicks on the heart icon for a product")
     public void addToWishList(){

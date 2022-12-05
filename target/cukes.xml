@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="113.606">
-<testcase classname="User could register to the website" name="User registers with valid data successfully" time="7.743">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="24" time="195.001">
+<testcase classname="User could register to the website" name="User registers with valid data successfully" time="7.982">
 <system-out><![CDATA[Given User is on the registration page......................................passed
 When User selects a gender..................................................passed
 And Enters a first name.....................................................passed
@@ -12,14 +12,21 @@ And Clicks on register button...............................................pass
 Then User should be registered successfully.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could login to the website and reset his password" name="User could log in with valid email and password" time="5.746">
+<testcase classname="User could login to the website and reset his password" name="User could log in with valid email and password" time="6.349">
 <system-out><![CDATA[Given User is on the login page.............................................passed
-When User enters a valid email and password.................................passed
+When User enters "Test123@test.com" as email and "Test@1234" as password....passed
 And Clicks on login button..................................................passed
 Then User should be logged-in successfully..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could login to the website and reset his password" name="User could reset his/her password successfully" time="7.349">
+<testcase classname="User could login to the website and reset his password" name="User can't login with invalid email and password" time="6.278">
+<system-out><![CDATA[Given User is on the login page.............................................passed
+When User enters "Test502@test.com" as email and "Test@124" as password.....passed
+And Clicks on login button..................................................passed
+Then An error message should appear and user can't login....................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could login to the website and reset his password" name="User could reset his/her password successfully" time="6.56">
 <system-out><![CDATA[Given User is on the login page.............................................passed
 When User clicks on forgot password link....................................passed
 And Enters the registered email.............................................passed
@@ -27,56 +34,145 @@ And Clicks on recover button................................................pass
 Then The password should be reset successfully..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could search the website for a specific product" name="Logged User could search for any product" time="7.372">
+<testcase classname="User could search the website for a specific product" name="Logged User could search for products using product name" time="6.506">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 When User enters "laptop" in the search field...............................passed
 And Clicks on search button.................................................passed
 Then The related results should contain the "laptop"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could search the website for a specific product" name="Logged User could search for any product 2" time="7.213">
+<testcase classname="User could search the website for a specific product" name="Logged User could search for products using product name 2" time="6.467">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 When User enters "apple" in the search field................................passed
 And Clicks on search button.................................................passed
 Then The related results should contain the "apple".........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could search the website for a specific product" name="Logged User could search for any product 3" time="7.299">
+<testcase classname="User could search the website for a specific product" name="Logged User could search for products using product name 3" time="6.574">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 When User enters "nike" in the search field.................................passed
 And Clicks on search button.................................................passed
 Then The related results should contain the "nike"..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User can change the selected currency" name="Logged User could switch between currencies US-Euro" time="6.594">
+<testcase classname="User could search the website for a specific product" name="Logged User could search for products using sku" time="7.813">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When User enters "SCI_FAITH" in the search field............................passed
+And Clicks on search button.................................................passed
+And Opens the product's page................................................passed
+Then The product's page should contain the entered "SCI_FAITH"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search the website for a specific product" name="Logged User could search for products using sku 2" time="7.711">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When User enters "APPLE_CAM" in the search field............................passed
+And Clicks on search button.................................................passed
+And Opens the product's page................................................passed
+Then The product's page should contain the entered "APPLE_CAM"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search the website for a specific product" name="Logged User could search for products using sku 3" time="7.856">
+<system-out><![CDATA[Given The user is logged in.................................................passed
+When User enters "SF_PRO_11" in the search field............................passed
+And Clicks on search button.................................................passed
+And Opens the product's page................................................passed
+Then The product's page should contain the entered "SF_PRO_11"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="User can change the selected currency" name="Logged User could switch between currencies US-Euro" time="6.794">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 Then The products price should appear with the Dollar symbol................passed
 When User sets the currency to Euro.........................................passed
 Then The products price should appear with the Euro symbol..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User can select subcategories of different categories" name="Logged user could select different Categories" time="5.773">
+<testcase classname="Home slider contains Ads for some products and the user can interact with it" name="User can open the product's page from it's Ad in the home slider" time="9.449">
+<failure message="Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 5 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: '3ATEF-74', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62617}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62617/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d6e41c5515bd0186733ca37875a0af78" type="org.openqa.selenium.TimeoutException"><![CDATA[When The user clicks on the Ad in the home slider...........................passed
+Then The user should be redirected to the related lumia product page........failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/nokia-lumia-1020". Current url: "https://demo.nopcommerce.com/" (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: '3ATEF-74', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62617}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62617/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d6e41c5515bd0186733ca37875a0af78
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.HomeSliders_StepDef.lumiaProductPage(HomeSliders_StepDef.java:21)
+	at ✽.The user should be redirected to the related lumia product page(file:///D:/Programming/FWD/src/main/resources/features/FF05_HomeSliders.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="Home slider contains Ads for some products and the user can interact with it" name="User can open different products from their Ad in the home slider" time="11.575">
+<failure message="Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 5 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: '3ATEF-74', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62639/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a15fa8cfa0452cb99cc02e30702b9d33" type="org.openqa.selenium.TimeoutException"><![CDATA[When The user switches the Ad in the home slider............................passed
+And The user clicks on the Ad in the home slider............................passed
+Then The user should be redirected to the related iphone product page.......failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/iphone-6". Current url: "https://demo.nopcommerce.com/" (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: '3ATEF-74', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62639/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a15fa8cfa0452cb99cc02e30702b9d33
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.HomeSliders_StepDef.iphoneProductPage(HomeSliders_StepDef.java:35)
+	at ✽.The user should be redirected to the related iphone product page(file:///D:/Programming/FWD/src/main/resources/features/FF05_HomeSliders.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="Provide the user with different social media links to follow us on" name="User can follow the website on different social media" time="6.707">
+<system-out><![CDATA[When The user clicks on "Facebook" button...................................passed
+Then The user should be redirected to the related "https://www.facebook.com/nopCommerce".passed
+]]></system-out>
+</testcase>
+<testcase classname="Provide the user with different social media links to follow us on" name="User can follow the website on different social media 2" time="6.75">
+<system-out><![CDATA[When The user clicks on "Twitter" button....................................passed
+Then The user should be redirected to the related "https://twitter.com/nopCommerce".passed
+]]></system-out>
+</testcase>
+<testcase classname="Provide the user with different social media links to follow us on" name="User can follow the website on different social media 3" time="7.206">
+<failure message="Social media link assertion expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[When The user clicks on "RSS" button........................................passed
+Then The user should be redirected to the related "https://demo.nopcommerce.com/new-online-store-is-open".failed
+
+StackTrace:
+java.lang.AssertionError: Social media link assertion expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.FollowUs_StepDef.openSocialMedia(FollowUs_StepDef.java:30)
+	at ✽.The user should be redirected to the related "https://demo.nopcommerce.com/new-online-store-is-open"(file:///D:/Programming/FWD/src/main/resources/features/FF06_FollowUs.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="Provide the user with different social media links to follow us on" name="User can follow the website on different social media 4" time="7.598">
+<system-out><![CDATA[When The user clicks on "YouTube" button....................................passed
+Then The user should be redirected to the related "https://www.youtube.com/user/nopCommerce".passed
+]]></system-out>
+</testcase>
+<testcase classname="User can select subcategories of different categories" name="Logged user could select different Categories" time="6.547">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 When User hovers on a random category.......................................passed
 And Clicks on a random subcategory if found or the category itself if there's no subcategory.passed
 Then User should be redirected to the selected page correctly...............passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could filter the products with color and with different tags" name="Logged user could filter with color" time="6.424">
+<testcase classname="User could filter the products with color and with different tags" name="Logged user could filter with color" time="6.067">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 And The user opens the shoes subcategory from the apparel category..........passed
 When User filters the products by red color.................................passed
 Then The products should be filtered according to the selected color........passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could filter the products with color and with different tags" name="Logged user could select different tags" time="11.768">
+<testcase classname="User could filter the products with color and with different tags" name="Logged user could select different tags" time="10.784">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 And The user searches for something.........................................passed
 When The user selects a tag from the popular tags section...................passed
 Then The products should be filtered according to the selected tag..........passed
 ]]></system-out>
 </testcase>
-<testcase classname="User can add products to the shopping cart and can manage the added products there" name="Logged user could add different products to Shopping cart" time="9.068">
+<testcase classname="User can add products to the shopping cart and can manage the added products there" name="Logged user could add different products to Shopping cart" time="10.017">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 And The user searches for something.........................................passed
 When User adds a product to the cart........................................passed
@@ -86,14 +182,14 @@ Then The product should be added to the cart successfully...................pass
 And The cart should contain the added products..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User can add products to the wishlist so that he can buy them later" name="Logged user could add different products to Wishlist" time="10.766">
+<testcase classname="User can add products to the wishlist so that he can buy them later" name="Logged user could add different products to Wishlist" time="10.915">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 When The user clicks on the heart icon for a product........................passed
 Then The product should be added to the wishlist successfully...............passed
 And The wishlist should contain the product.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User can add products to the compare list to compare between their details" name="Logged user could add different products to compare list" time="8.093">
+<testcase classname="User can add products to the compare list to compare between their details" name="Logged user could add different products to compare list" time="10.063">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 And The user searches for something.........................................passed
 When The user adds a product to the compare list............................passed
@@ -103,7 +199,7 @@ Then The product should be added to the compare list successfully...........pass
 And The compare list should contain the added products......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User can create an order and checkout successfully" name="Create successful Order" time="12.2">
+<testcase classname="User can create an order and checkout successfully" name="Create successful Order" time="14.036">
 <system-out><![CDATA[Given The user is logged in.................................................passed
 And User has a product in the shopping cart.................................passed
 When The user accepts the terms of service and goes to the checkout page....passed

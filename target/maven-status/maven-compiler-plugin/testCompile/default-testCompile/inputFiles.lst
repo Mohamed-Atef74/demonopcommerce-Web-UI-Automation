@@ -6,6 +6,7 @@ D:\Programming\FWD\src\test\java\org\example\stepDefs\Currencies_StepDef.java
 D:\Programming\FWD\src\test\java\org\example\stepDefs\Filtration_StepDef.java
 D:\Programming\FWD\src\test\java\org\example\stepDefs\CreateOrder_StefDef.java
 D:\Programming\FWD\src\test\java\org\example\stepDefs\CompareList_StepDef.java
+D:\Programming\FWD\src\test\java\org\example\stepDefs\HomeSliders_StepDef.java
 D:\Programming\FWD\src\test\java\org\example\stepDefs\WishList_StepDef.java
 D:\Programming\FWD\src\test\java\org\example\stepDefs\Search_StepDef.java
 D:\Programming\FWD\src\test\java\org\example\stepDefs\Register_StepDef.java
@@ -19,3 +20,4 @@ D:\Programming\FWD\src\test\java\org\example\pages\CompareListPage.java
 D:\Programming\FWD\src\test\java\org\example\pages\ProductsPage.java
 D:\Programming\FWD\src\test\java\org\example\pages\CartPage.java
 D:\Programming\FWD\src\test\java\org\example\pages\HomePage.java
+D:\Programming\FWD\src\test\java\org\example\stepDefs\FollowUs_StepDef.java

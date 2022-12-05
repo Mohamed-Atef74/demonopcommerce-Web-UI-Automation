@@ -78,4 +78,19 @@ public class HomePage {
     public WebElement ordersPage(){
         return Hooks.driver.findElement(By.linkText("Orders"));
     }
+
+    public WebElement homeSlider(){
+        return Hooks.driver.findElement(By.id("nivo-slider"));
+    }
+
+    public WebElement homeSlider1(){
+        return Hooks.driver.findElement(By.cssSelector("[rel=\"0\"]"));
+    }
+    public WebElement homeSlider2(){
+        return Hooks.driver.findElement(By.cssSelector("[rel=\"1\"]"));
+    }
+
+    public WebElement socialMedia(String name){
+        return Hooks.driver.findElement(By.linkText(name));
+    }
 }

@@ -3,15 +3,9 @@ package org.example.stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.*;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
 
 public class CreateOrder_StefDef {
-    HomePage homeElements = new HomePage();
-    CartPage cartPageElements = new CartPage();
-    CheckoutPage checkoutElements = new CheckoutPage();
-    OrdersPage ordersPageElements = new OrdersPage();
-    SoftAssert soft = new SoftAssert();
     String orderNumber;
 
     @And("User has a product in the shopping cart")

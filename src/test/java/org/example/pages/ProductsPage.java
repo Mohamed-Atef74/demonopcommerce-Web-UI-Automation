@@ -36,4 +36,8 @@ public class ProductsPage {
         return Hooks.driver.findElements(By.cssSelector("div[class=\"buttons\"]>button[class=\"button-2 add-to-compare-list-button\"]"));
     }
 
+    public WebElement sku(){
+        return Hooks.driver.findElement(By.cssSelector("div[class=\"sku\"] > span[class=\"value\"]"));
+    }
+
 }

@@ -7,8 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage {
 
-    Hooks hook = new Hooks();
-
     public WebElement registerLink(){
         return Hooks.driver.findElement(By.cssSelector("a[class=\"ico-register\"]"));
     }

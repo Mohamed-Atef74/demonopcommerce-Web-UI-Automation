@@ -2,12 +2,9 @@ package org.example.stepDefs;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.HomePage;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
 
 public class Currencies_StepDef {
-    HomePage homeElements = new HomePage();
-    SoftAssert soft = new SoftAssert();
 
     @Then("The products price should appear with the Dollar symbol")
     public void productPriceCurrencyInDollars(){

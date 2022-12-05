@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Dec 03 11:17:11 EET 2022</td>
+<td>Started on:</td><td>Mon Dec 05 21:15:32 EET 2022</td>
 </tr>
-<tr><td>Total time:</td><td>114 seconds (114006 ms)</td>
+<tr><td>Total time:</td><td>195 seconds (195477 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,83 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can open the product's page from it's Ad in the home slider", "Home slider contains Ads for some products and the user can interact with it"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;3ATEF-74&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62617}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62617/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d6e41c5515bd0186733ca37875a0af78
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.HomeSliders_StepDef.lumiaProductPage(HomeSliders_StepDef.java:21)
+	at ?.The user should be redirected to the related lumia product page(file:///D:/Programming/FWD/src/main/resources/features/FF05_HomeSliders.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1760175419", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1760175419'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;3ATEF-74&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62617}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62617/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d6e41c5515bd0186733ca37875a0af78
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.HomeSliders_StepDef.lumiaProductPage(HomeSliders_StepDef.java:21)
+	at ?.The user should be redirected to the related lumia product page(file:///D:/Programming/FWD/src/main/resources/features/FF05_HomeSliders.feature:5)
+</pre></div></td>
+<td>9</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can follow the website on different social media", "Provide the user with different social media links to follow us on"</td>
+<td><div><pre>java.lang.AssertionError: Social media link assertion expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.example.stepDefs.FollowUs_StepDef.openSocialMedia(FollowUs_StepDef.java:30)
+	at ?.The user should be redirected to the related &quot;https://demo.nopcommerce.com/new-online-store-is-open&quot;(file:///D:/Programming/FWD/src/main/resources/features/FF06_FollowUs.feature:5)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1861536737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1861536737'><pre>java.lang.AssertionError: Social media link assertion expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.FollowUs_StepDef.openSocialMedia(FollowUs_StepDef.java:30)
+	at ?.The user should be redirected to the related &quot;https://demo.nopcommerce.com/new-online-store-is-open&quot;(file:///D:/Programming/FWD/src/main/resources/features/FF06_FollowUs.feature:5)
+</pre></div></td>
+<td>7</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can open different products from their Ad in the home slider", "Home slider contains Ads for some products and the user can interact with it"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;3ATEF-74&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62639/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a15fa8cfa0452cb99cc02e30702b9d33
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.HomeSliders_StepDef.iphoneProductPage(HomeSliders_StepDef.java:35)
+	at ?.The user should be redirected to the related iphone product page(file:///D:/Programming/FWD/src/main/resources/features/FF05_HomeSliders.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1460298405", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1460298405'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;3ATEF-74&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62639/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a15fa8cfa0452cb99cc02e30702b9d33
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.HomeSliders_StepDef.iphoneProductPage(HomeSliders_StepDef.java:35)
+	at ?.The user should be redirected to the related iphone product page(file:///D:/Programming/FWD/src/main/resources/features/FF05_HomeSliders.feature:10)
+</pre></div></td>
+<td>11</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,52 +152,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User could log in with valid email and password", "User could login to the website and reset his password"</td>
-<td></td>
-<td>5</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could select different Categories", "User can select subcategories of different categories"</td>
-<td></td>
-<td>5</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for any product", "User could search the website for a specific product"</td>
-<td></td>
-<td>7</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for any product", "User could search the website for a specific product"</td>
-<td></td>
-<td>7</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for any product", "User could search the website for a specific product"</td>
-<td></td>
-<td>7</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User registers with valid data successfully", "User could register to the website"</td>
-<td></td>
-<td>7</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
 <td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User could reset his/her password successfully", "User could login to the website and reset his password"</td>
-<td></td>
-<td>7</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could add different products to Shopping cart", "User can add products to the shopping cart and can manage the added products there"</td>
-<td></td>
-<td>9</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could switch between currencies US-Euro", "User can change the selected currency"</td>
-<td></td>
-<td>6</td>
-<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
-<tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could filter with color", "User could filter the products with color and with different tags"</td>
 <td></td>
 <td>6</td>
 <td>org.example.testRunner.Runner@1a1d6a08</td></tr>
@@ -130,19 +162,99 @@ function toggleAllBoxes() {
 <td>10</td>
 <td>org.example.testRunner.Runner@1a1d6a08</td></tr>
 <tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could select different tags", "User could filter the products with color and with different tags"</td>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for products using product name", "User could search the website for a specific product"</td>
 <td></td>
-<td>11</td>
+<td>6</td>
 <td>org.example.testRunner.Runner@1a1d6a08</td></tr>
 <tr>
-<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create successful Order", "User can create an order and checkout successfully"</td>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for products using product name", "User could search the website for a specific product"</td>
 <td></td>
-<td>12</td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for products using sku", "User could search the website for a specific product"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could filter with color", "User could filter the products with color and with different tags"</td>
+<td></td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can follow the website on different social media", "Provide the user with different social media links to follow us on"</td>
+<td></td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for products using product name", "User could search the website for a specific product"</td>
+<td></td>
+<td>6</td>
 <td>org.example.testRunner.Runner@1a1d6a08</td></tr>
 <tr>
 <td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could add different products to compare list", "User can add products to the compare list to compare between their details"</td>
 <td></td>
+<td>10</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create successful Order", "User can create an order and checkout successfully"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User registers with valid data successfully", "User could register to the website"</td>
+<td></td>
 <td>8</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can follow the website on different social media", "Provide the user with different social media links to follow us on"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could select different tags", "User could filter the products with color and with different tags"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for products using sku", "User could search the website for a specific product"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can follow the website on different social media", "Provide the user with different social media links to follow us on"</td>
+<td></td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could select different Categories", "User can select subcategories of different categories"</td>
+<td></td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could search for products using sku", "User could search the website for a specific product"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can't login with invalid email and password", "User could login to the website and reset his password"</td>
+<td></td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User could log in with valid email and password", "User could login to the website and reset his password"</td>
+<td></td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged User could switch between currencies US-Euro", "User can change the selected currency"</td>
+<td></td>
+<td>6</td>
+<td>org.example.testRunner.Runner@1a1d6a08</td></tr>
+<tr>
+<td title='org.example.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logged user could add different products to Shopping cart", "User can add products to the shopping cart and can manage the added products there"</td>
+<td></td>
+<td>10</td>
 <td>org.example.testRunner.Runner@1a1d6a08</td></tr>
 </table><p>
 </body>

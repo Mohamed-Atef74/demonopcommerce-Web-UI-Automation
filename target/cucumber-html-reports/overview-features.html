@@ -50,8 +50,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                74,
-                0,
+                103,
+                3,
                 0,
                 0,
                 0
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 74) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 106) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                14,
-                0
+                21,
+                3
             ],
             backgroundColor: [
                 "#00B000",
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 14) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 24) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -154,7 +154,7 @@ $(document).ready(function() {
         datasets: [{
             data: [
                    10,
-                   0
+                   2
                ],
                backgroundColor: [
                 "#00B000",
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 12) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber HTML Reports</td>
         <td>1</td>
-      <td>03 Dec 2022, 11:19</td>
+      <td>05 Dec 2022, 21:18</td>
     </tr>
   </tbody>
 </table>
@@ -338,41 +338,41 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="2157000000">2.157</td>
+        <td class="duration" data-value="2259000000">2.259</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_1_3009424302.html">User could login to the website and reset his password</a></td>
 
-        <td      class="passed"    >9</td>
+        <td      class="passed"    >13</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">9</td>
-
-        <td  class="passed"    >2</td>
-        <td >0</td>
-        <td class="total">2</td>
-
-        <td class="duration" data-value="3554000000">3.554</td>
-        <td class="passed">Passed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_2_500089872.html">User could search the website for a specific product</a></td>
-
-        <td      class="passed"    >12</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">12</td>
+        <td class="total">13</td>
 
         <td  class="passed"    >3</td>
         <td >0</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="7323000000">7.323</td>
+        <td class="duration" data-value="5265000000">5.265</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_2_500089872.html">User could search the website for a specific product</a></td>
+
+        <td      class="passed"    >27</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">27</td>
+
+        <td  class="passed"    >6</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td class="duration" data-value="15790000000">15.790</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -389,11 +389,45 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="2002000000">2.002</td>
+        <td class="duration" data-value="2221000000">2.221</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_4_1868760258.html">User can select subcategories of different categories</a></td>
+        <td class="tagname"><a href="report-feature_4_1550436891.html">Home slider contains Ads for some products and the user can interact with it</a></td>
+
+        <td      class="passed"    >3</td>
+        <td      class="failed"    >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">5</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="12472000000">12.472</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_5_3478411188.html">Provide the user with different social media links to follow us on</a></td>
+
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">8</td>
+
+        <td  class="passed"    >3</td>
+        <td  class="failed"    >1</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="9631000000">9.631</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_6_1051111808.html">User can select subcategories of different categories</a></td>
 
         <td      class="passed"    >4</td>
         <td >0</td>
@@ -406,11 +440,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="1782000000">1.782</td>
+        <td class="duration" data-value="1964000000">1.964</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_5_3214841363.html">User could filter the products with color and with different tags</a></td>
+        <td class="tagname"><a href="report-feature_7_2397192913.html">User could filter the products with color and with different tags</a></td>
 
         <td      class="passed"    >8</td>
         <td >0</td>
@@ -423,11 +457,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="9584000000">9.584</td>
+        <td class="duration" data-value="8175000000">8.175</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_6_723534662.html">User can add products to the shopping cart and can manage the added products there</a></td>
+        <td class="tagname"><a href="report-feature_8_3329558216.html">User can add products to the shopping cart and can manage the added products there</a></td>
 
         <td      class="passed"    >7</td>
         <td >0</td>
@@ -440,11 +474,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="4543000000">4.543</td>
+        <td class="duration" data-value="5372000000">5.372</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_7_2921075112.html">User can add products to the wishlist so that he can buy them later</a></td>
+        <td class="tagname"><a href="report-feature_9_1463247473.html">User can add products to the wishlist so that he can buy them later</a></td>
 
         <td      class="passed"    >4</td>
         <td >0</td>
@@ -457,11 +491,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="6241000000">6.241</td>
+        <td class="duration" data-value="6324000000">6.324</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_8_3663583599.html">User can add products to the compare list to compare between their details</a></td>
+        <td class="tagname"><a href="report-feature_10_4229687302.html">User can add products to the compare list to compare between their details</a></td>
 
         <td      class="passed"    >7</td>
         <td >0</td>
@@ -474,11 +508,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="3577000000">3.577</td>
+        <td class="duration" data-value="5470000000">5.470</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_9_3950690324.html">User can create an order and checkout successfully</a></td>
+        <td class="tagname"><a href="report-feature_11_78424854.html">User can create an order and checkout successfully</a></td>
 
         <td      class="passed"    >10</td>
         <td >0</td>
@@ -491,7 +525,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="7680000000">7.680</td>
+        <td class="duration" data-value="9420000000">9.420</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -499,33 +533,33 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>74</td>
+      <td>103</td>
+      <td>3</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>74</td>
+      <td>106</td>
 
-      <td>14</td>
-      <td>0</td>
-      <td>14</td>
+      <td>21</td>
+      <td>3</td>
+      <td>24</td>
 
-      <td class="duration">48.443</td>
-      <td>10</td>
+      <td class="duration">1:24.363</td>
+      <td>12</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
+      <td>97.17%</td>
+      <td>2.83%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
+      <td>87.50%</td>
+      <td>12.50%</td>
       <td></td>
       <td></td>
-      <td>100.00%</td>
+      <td>83.33%</td>
     </tr>
   </tfoot>
 </table>

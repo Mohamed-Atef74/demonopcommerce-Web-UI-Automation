@@ -3,25 +3,20 @@ package org.example.stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.HomePage;
-import org.example.pages.ProductsPage;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
+
 
 import java.util.Random;
 
 public class Filtration_StepDef {
 
-    HomePage homeElements = new HomePage();
-    ProductsPage productsPageElements = new ProductsPage();
     Random random = new Random();
     int x;
     String[] selectedTag = new String[3];
     String[] url = new String[3];
     String[] title = new String[3];
-    SoftAssert soft = new SoftAssert();
 
     @And("The user opens the shoes subcategory from the apparel category")
     public void openShoesSubcategory(){

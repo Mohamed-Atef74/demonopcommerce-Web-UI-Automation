@@ -3,19 +3,12 @@ package org.example.stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.CompareListPage;
-import org.example.pages.HomePage;
-import org.example.pages.ProductsPage;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
 
 public class CompareList_StepDef {
 
     String product1;
     String product2;
-    SoftAssert soft = new SoftAssert();
-    HomePage homeElements = new HomePage();
-    ProductsPage productsPageElements = new ProductsPage();
-    CompareListPage compareListElements = new CompareListPage();
 
     @When("The user adds a product to the compare list")
     public void addToCompareList() {

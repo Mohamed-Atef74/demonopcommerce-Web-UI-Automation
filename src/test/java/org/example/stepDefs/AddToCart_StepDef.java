@@ -3,16 +3,10 @@ package org.example.stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.CartPage;
-import org.example.pages.HomePage;
-import org.example.pages.ProductsPage;
-import org.testng.asserts.SoftAssert;
+
+import static org.example.stepDefs.Hooks.*;
 
 public class AddToCart_StepDef {
-    HomePage homeElements = new HomePage();
-    ProductsPage productsPageElements = new ProductsPage();
-    CartPage cartPageElements = new CartPage();
-    SoftAssert soft = new SoftAssert();
     String product1;
     String product2;
 

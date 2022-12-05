@@ -4,13 +4,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.RegisterPage;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
 
 public class Register_StepDef {
-
-    RegisterPage registerElements = new RegisterPage();
-    SoftAssert soft = new SoftAssert();
 
     @Given("User is on the registration page")
     public void openRegistrationPage(){

@@ -1,20 +1,11 @@
 package org.example.stepDefs;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.HomePage;
-import org.example.pages.LoginPage;
-import org.testng.asserts.SoftAssert;
+import static org.example.stepDefs.Hooks.*;
 
 public class Search_StepDef {
-
-    HomePage homeElements = new HomePage();
-    LoginPage loginElements = new LoginPage();
-    SoftAssert soft = new SoftAssert();
-
-
 
     @When("User enters {string} in the search field")
     public void enterSearchText(String searchText){
@@ -32,6 +23,18 @@ public class Search_StepDef {
             soft.assertTrue(homeElements.searchResultsTitle().get(i).getText().toLowerCase().contains(searchText) , "Search results assertion");
 
         soft.assertTrue(Hooks.driver.getCurrentUrl().contains("search"), "URL assertion");
+        soft.assertAll();
+    }
+
+    @And("Opens the product's page")
+    public void openProductPage(){
+        homeElements.searchResults().get(0).click();
+
+    }
+
+    @Then("The product's page should contain the entered {string}")
+    public void skuName(String sku){
+        soft.assertEquals(productsPageElements.sku().getText(),sku,"SKU assertion");
         soft.assertAll();
     }
 }

@@ -22,6 +22,10 @@ public class LoginPage {
         return Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 login-button\"]"));
     }
 
+    public WebElement loginError(){
+        return Hooks.driver.findElement(By.cssSelector("[class=\"message-error validation-summary-errors\"]"));
+    }
+
     public WebElement myAccount(){
         return Hooks.driver.findElement(By.className("ico-account"));
     }

@@ -3,9 +3,10 @@ package org.example.stepDefs;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
-import org.example.pages.LoginPage;
+import org.example.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -13,7 +14,16 @@ import java.util.concurrent.TimeUnit;
 public class Hooks {
 
     public static WebDriver driver;
-    LoginPage loginElements = new LoginPage();
+    public static RegisterPage registerElements = new RegisterPage();
+    public static LoginPage loginElements = new LoginPage();
+    public static HomePage homeElements = new HomePage();
+    public static ProductsPage productsPageElements = new ProductsPage();
+    public static CartPage cartPageElements = new CartPage();
+    public static WishListPage wishListElements = new WishListPage();
+    public static CompareListPage compareListElements = new CompareListPage();
+    public static CheckoutPage checkoutElements = new CheckoutPage();
+    public static OrdersPage ordersPageElements = new OrdersPage();
+    public static SoftAssert soft = new SoftAssert();
 
     @Given("The user is logged in")
     public void loggedIn(){
